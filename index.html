@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOstack | Protocol Reference</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        :root {
+            --bg: #000000;
+            --surface: #0a0a0a;
+            --border: #222;
+            --text-main: #e5e5e5;
+            --text-dim: #666;
+            --accent: #fff;
+            --font-stack: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 60px 20px;
+            max-width: 840px;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .meta {
+            text-align: right;
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        /* ABSTRACT */
+        .abstract {
+            margin-bottom: 60px;
+            font-size: 15px;
+            color: #ccc;
+            max-width: 680px;
+            line-height: 1.6;
+        }
+
+        /* SECTION HEADERS */
+        h2 {
+            font-size: 11px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 10px;
+        }
+
+        /* PATENT GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            padding: 25px;
+            transition: border-color 0.2s;
+        }
+        
+        .card:hover { border-color: #444; }
+
+        .tag {
+            font-size: 10px;
+            background: #222;
+            color: #fff;
+            padding: 2px 6px;
+            display: inline-block;
+            margin-bottom: 12px;
+            border: 1px solid #333;
+        }
+
+        h3 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        p.desc {
+            font-size: 12px;
+            color: #888;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ACTION AREA */
+        .actions {
+            margin-top: 80px;
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 12px;
+            border-bottom: 1px solid #333;
+            transition: 0.2s;
+        }
+        .btn-secondary:hover { color: var(--accent); border-color: var(--accent); }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 100px;
+            font-size: 11px;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a.contact { color: #666; text-decoration: none; }
+        a.contact:hover { color: #fff; }
+
+        @media (max-width: 700px) {
+            .grid { grid-template-columns: 1fr; }
+            .actions { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <div class="brand">GEOstack</div>
+        </div>
+        <div class="meta">
+            PROTOCOL STATUS: PRIVATE<br>
+            MAINNET: PRIVATE
+        </div>
+    </header>
+
+    <p class="abstract">
+        <strong>The Trillion-Dollar Glitch:</strong> 
+        Modern LLMs are epistemically opaque. They lack a verifiable state layer, creating "Inventory Drift" 
+        between conversational intent and economic execution. 
+        <br><br>
+        GEOstack is the infrastructure protocol that bridges this gap. We provide the <strong>State Layer</strong> (Truth) 
+        and the <strong>Action Layer</strong> (Commerce) for the autonomous agent economy.
+    </p>
+
+    <h2>01. Intellectual Property</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="tag">US 63/944,241 (PENDING)</span>
+            <h3>Dual-Interface Environments</h3>
+            <p class="desc">
+                System for automated generation of Agentic (Semantic) interfaces. 
+                Enables deterministic "Shadow URLs" for agents, eliminating DOM scraping.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="tag">US 63/944,232 (PENDING)</span>
+            <h3>Core State & Action Protocol</h3>
+            <p class="desc">
+                A decoupled kernel separating verifiable State proofs from Action orchestration.
+                Features Government Oversight Injection for regulatory compliance.
+            </p>
+        </div>
+    </div>
+
+    <h2>02. Technical Specification</h2>
+    <div class="card" style="margin-bottom: 60px;">
+        <span class="tag">PROTOCOL MECHANICS</span>
+        <h3>x402 Settlement Locking</h3>
+        <p class="desc" style="margin-bottom: 15px;">
+            The protocol utilizes the reserved <strong>HTTP 402</strong> status code to enforce settlement finality.
+            Inventory is locked at the network edge via a pre-authorization challenge.
+        </p>
+        <div style="background: #000; padding: 15px; border: 1px solid #222; color: #888; font-size: 11px;">
+>> POST /execute_intent<br>
+<< 402 Payment Required<br>
+{ "protocol": "x402", "lock_id": "0x7a...", "expiry": "4000ms" }
+        </div>
+    </div>
+
+    <div class="actions">
+        <a href="https://v0-protocol-simulation-dashboard.vercel.app" class="btn-primary">[ INITIALIZE DEMO ]</a>
+        <a href="thesis.pdf" class="btn-secondary">[ READ THE THESIS: "THE SILENT SWITCH" ]</a>
+    </div>
+
+    <div class="footer">
+        <div>
+            &copy; 2025 GEOSTACK INC.<br>
+            PALO ALTO, CA / RIYADH, SA
+        </div>
+        <div>
+            CONTACT: <a href="mailto:SAAD@getgeostack.com" class="contact">SAAD@getgeostack.com</a>
+        </div>
+    </div>
+
+</body>
+</html>
